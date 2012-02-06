@@ -1,0 +1,15 @@
+a { text-decoration: none; }
+body { font-family: arial; font-size: 30px; }
+
+.thingies {
+    float:left;
+    margin: 0 auto auto;
+    width: 44%;
+    margin-right: 20px;
+}
+
+li,a {display: block;}
+
+li:nth-child(even) {
+    background: hsl(180, 32%, 95%);
+}
