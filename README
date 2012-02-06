@@ -1,0 +1,11 @@
+Lx Rehearse
+    
+    Web app to build incremental rehearsal teaching presentations.
+    Export to powerpoint format (other open standard?).
+    In-browser presentation.
+
+TODO:
+    Class toggle for selected knowns/unknowns.
+    Class to export to .ppt or browser presentation view.
+    Build out mvc.
+    Lots more things...
