@@ -15,10 +15,12 @@ $presentation = $IR->createPresentation();
 ?>
 <!doctype html>
 <head>
-<title>LxRehease</title>
+<title>LxRehearse</title>
 <link rel="stylesheet" href="../public/style.css">
 <head>
 <body>
+
+<!--<?php print_r($presentation); ?>--!>
 
 <div class="thingies">
 <ul>

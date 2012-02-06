@@ -9,6 +9,7 @@
 <label for="knowns">Unknowns</label>
 <input id="unknowns" name="unknowns">
 <input type="submit" name="submit">
+</div>
 </form>
 </body>
 </html>
