@@ -12,6 +12,14 @@ $unknowns = explode(',', $_POST['unknowns']);
 $IR = new IR($knowns, $unknowns);
 
 $presentation = $IR->createPresentation();
+function loop($arr) {
+    echo '<ul>';
+    foreach ($arr as $var) {
+        echo '<li><a href="#">'. $var .'</a></li>';
+     }
+    echo '</ul>';
+}
+
 ?>
 <!doctype html>
 <head>
@@ -20,23 +28,13 @@ $presentation = $IR->createPresentation();
 <head>
 <body>
 
-<!--<?php print_r($presentation); ?>--!>
-
 <div class="thingies">
-<ul>
-<?php foreach ($knowns as $var): ?>
-    <li><a href="#"><?php echo $var ?></a></li>
-<?php endforeach; ?>
-</ul>
+<?php loop($knowns);?>
 </div>
 
 
 <div class="thingies">
-<ul>
-<?php foreach ($unknowns as $var): ?>
-    <li><a href="#"><?php echo $var ?></a></li>
-<?php endforeach; ?>
-</ul>
+<?php loop($unknowns);?>
 </div>
 
 </body>
