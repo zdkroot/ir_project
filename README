@@ -7,5 +7,7 @@ Lx Rehearse
 TODO:
     Class toggle for selected knowns/unknowns.
     Class to export to .ppt or browser presentation view.
-    Build out mvc.
+    Move vars out of global space.
+    Build out mvc (sorta)
+    Build view loader/template.
     Lots more things...
