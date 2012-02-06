@@ -10,4 +10,5 @@ TODO:
     Move vars out of global space.
     Build out mvc (sorta)
     Build view loader/template.
+    Make index.php into a front controller, add config/env options there.
     Lots more things...
