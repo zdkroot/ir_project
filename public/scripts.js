@@ -1,5 +1,16 @@
 const _selected = 'selected';
 const _drop = 'drophover';
+const draggables = document.getElementsByClassName('drag');
+
+[].forEach.call(draggables, function(drag) {
+    drag.addEventListener('dragstart', handleDragStart, false);
+    drag.addEventListener('dragenter', handleDragEnter, false);
+    drag.addEventListener('dragover', handleDragOver, false);
+    drag.addEventListener('dragleave', handleDragLeave, false);
+    drag.addEventListener('dragend', handleDragEnd, false);
+    drag.addEventListener('drop', handleDrop, false);
+    drag.addEventListener('click', toggleClass, true);
+});
 
 function handleDragStart(e)
 {
@@ -21,9 +32,9 @@ function handleDragLeave(e)
 
 function handleDragEnd(e)
 {
-    [].forEach.call(elems, function(elem)
+    [].forEach.call(draggables, function(drag)
     {
-        elem.removeClass(_drop);
+        drag.removeClass(_drop);
     });
 }
 
@@ -75,50 +86,6 @@ function swapClass(elemA, elemB, c)
     return;
 }  
 
-var elems = document.getElementsByClassName('drag');
-[].forEach.call(elems, function(elem) {
-    elem.addEventListener('dragstart', handleDragStart, false);
-    elem.addEventListener('dragenter', handleDragEnter, false);
-    elem.addEventListener('dragover', handleDragOver, false);
-    elem.addEventListener('dragleave', handleDragLeave, false);
-    elem.addEventListener('dragend', handleDragEnd, false);
-    elem.addEventListener('drop', handleDrop, false);
-    elem.addEventListener('click', toggleClass, true);
-});
-
-Element.prototype.toggleClass = function(name)
-{
-    if (this.hasClass(name))
-    {
-        this.removeClass(name);
-    }
-    else
-    {
-        this.addClass(name);
-    }
-};
-
-Element.prototype.hasClass = function(name)
-{
-    return new RegExp("(?:^|\\s+)" + name + "(?:\\s+|$)").test(this.className);
-};
-
-Element.prototype.addClass = function(name)
-{
-    if(!this.hasClass(name))
-    {
-        this.className = this.className ? [this.className, name].join(' '): name
-    }
-};
-
-Element.prototype.removeClass = function(name)
-{
-    if(this.hasClass(name))
-    {
-        var curClass = this.className;
-        this.className = curClass.replace(new RegExp("(?:^|\\s+)" + name + "(?:\\s+|$)", "g"), "");
-    }
-};
 Element.prototype.toggleClass = function(name)
 {
     if (this.hasClass(name))
