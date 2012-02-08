@@ -5,9 +5,11 @@ Lx Rehearse
     In-browser presentation.
 
 TODO:
-    Class toggle for selected knowns/unknowns.
+    [x]Class toggle for selected knowns/unknowns.
     Class to export to .ppt or browser presentation view.
     [x] Move vars out of global space.
+    Declare other consts
+    Do I need toggleClass()?
     Build view loader/template.
     [50%] Make index.php into a front controller, add config/env options there.
     Reorganize

@@ -1,5 +1,6 @@
 a { text-decoration: none; }
 body { font-family: arial; font-size: 30px; }
+
 [draggable] {
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -13,7 +14,10 @@ body { font-family: arial; font-size: 30px; }
     width: 44%;
     margin-right: 20px;
 }
-li,a {display: block;margin-bottom: 3px; cursor: move;}
+
+li, a {
+    display: block;margin-bottom: 3px; cursor: move;
+}
 
 li.drophover {
    	-moz-box-shadow: 0 0 5px rgba(0,0,150,0.5);
@@ -21,17 +25,18 @@ li.drophover {
 	box-shadow: 0 0 5px rgba(0,0,150,0.5); 
 }
 
+li.selected {
+   	-moz-box-shadow: 0 0 5px rgba(180,0,0,0.5);
+	-webkit-box-shadow: 0 0 5px rgba(180,0,0,0.5);
+	box-shadow: 0 0 5px rgba(180,0,0,0.5); 
+}
+
 li:hover {
    	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	box-shadow: 0 0 5px rgba(0,0,0,0.5); 
 }
-li.selected {
-   	-moz-box-shadow: 0 0 5px rgba(0,0,120,0.5);
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
-	box-shadow: 0 0 5px rgba(0,0,0,0.5); 
 
-}
 li:nth-child(even) {
     background: hsl(180, 32%, 95%);
 }
