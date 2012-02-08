@@ -10,11 +10,26 @@ function handleDragStart(e)
 
 function handleDragEnter(e)
 {
-    // change to hover class, dashed border or highlight
+    this.addClass('drophover');
 }
 
-function handleDragOver (e) {
-    if ( e.preventDefault ) {
+function handleDragLeave(e)
+{
+    this.removeClass('drophover');
+}
+
+/*function handleDragEnd(e)
+{
+    [].forEach.call(elems, function(elem))
+    {
+        elem.removeClass('drophover');
+    }
+}*/
+
+
+function handleDragOver(e)
+{
+    if (e.preventDefault) {
         e.preventDefault();
     }
     e.dataTransfer.dropEffet = 'move';
@@ -24,14 +39,16 @@ function handleDragOver (e) {
 
 function handleDrop(e)
 {
-    if ( e.stopPropagation ) {
+    if (e.stopPropagation)
+    {
         e.stopPropagation();
     }
 
-    if ( dragSrc != this ) {
+    if ( dragSrc != this )
+    {
         dragSrc.innerHTML = this.innerHTML;
         this.innerHTML = e.dataTransfer.getData('text/html');
-        this.style.opacity = '1.0';
+        this.removeClass('drophover');
     }
     return false;
 }
@@ -41,5 +58,28 @@ var elems = document.getElementsByClassName('drag');
     elem.addEventListener('dragstart', handleDragStart, false);
     elem.addEventListener('dragenter', handleDragEnter, false);
     elem.addEventListener('dragover', handleDragOver, false);
+    elem.addEventListener('dragleave', handleDragLeave, false);
+    //elem.addEventListener('dragend', handleDragEnd, false);
     elem.addEventListener('drop', handleDrop, false);
 });
+
+Element.prototype.hasClass = function(name) {
+    return new RegExp("(?:^|\\s+)" + name + "(?:\\s+|$)").test(this.className);
+};
+
+Element.prototype.addClass = function(name)
+{
+    if(!this.hasClass(name))
+    {
+        this.className = this.className ? [this.className, name].join(' '): name
+    }
+};
+
+Element.prototype.removeClass = function(name)
+{
+    if(this.hasClass(name))
+    {
+        var curClass = this.className;
+        this.className = curClass.replace(new RegExp("(?:^|\\s+)" + name + "(?:\\s+|$)", "g"), "");
+    }
+};
