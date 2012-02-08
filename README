@@ -8,8 +8,9 @@ TODO:
     [x]Class toggle for selected knowns/unknowns.
     Class to export to .ppt or browser presentation view.
     [x] Move vars out of global space.
-    Declare other consts
-    Do I need toggleClass()?
+    [x]Declare other consts
+    [x]Do I need toggleClass()? -Yep
+    Build Expanding data sets that can also drag and drop...lol...
     Build view loader/template.
     [50%] Make index.php into a front controller, add config/env options there.
     Reorganize
