@@ -38,6 +38,7 @@ class IR {
         {
             /** Starts from one because arrays count from zero
              * and we need to use $j to take an array slice later
+             * 
              */
                 
             for ($j=1; $j < count($this->knowns) + 1; $j++)

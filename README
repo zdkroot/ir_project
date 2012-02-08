@@ -7,8 +7,10 @@ Lx Rehearse
 TODO:
     Class toggle for selected knowns/unknowns.
     Class to export to .ppt or browser presentation view.
-    Move vars out of global space.
-    Build out mvc (sorta)
+    [x] Move vars out of global space.
     Build view loader/template.
-    Make index.php into a front controller, add config/env options there.
+    [50%] Make index.php into a front controller, add config/env options there.
+    Reorganize
+    Need a view loader or mvc cause $_POST is gross.
+    Morph into mvc? Use existing framkework? 
     Lots more things...

@@ -1,15 +1,29 @@
+<?php
+    require_once('core/IR.php');
+    require_once('core/functions.php');
+    error_reporting(E_ALL);
+    ini_set('display_errors','On');
+    $unknowns = array( "p", "h", "t", "m", "f", "s" );
+    $knowns = array("c", "o");
+
+?>
 <!doctype html>
-<head>
+<head language="en">
+<meta charset="utf-8">
 <title>LxRehearse</title>
-</head>
+<link rel="stylesheet" href="public/style.css">
+<head>
 <body>
-<form action="core/generate.php" method="post">
-<label for="knowns">Knowns</label>
-<input id="knowns" name="knowns">
-<label for="knowns">Unknowns</label>
-<input id="unknowns" name="unknowns">
-<input type="submit" name="submit">
+
+<div class="thingies">
+<?php loop($knowns);?>
 </div>
-</form>
+
+
+<div class="thingies">
+<?php loop($unknowns);?>
+</div>
+
+<script src="public/scripts.js"></script>
 </body>
 </html>
