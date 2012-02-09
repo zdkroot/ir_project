@@ -10,6 +10,7 @@ TODO:
     [x] Move vars out of global space.
     [x]Declare other consts
     [x]Do I need toggleClass()? -Yep
+    Make the root <ul>s droppable, not just the <li>s
     Build Expanding data sets that can also drag and drop...lol...
     Build view loader/template.
     [50%] Make index.php into a front controller, add config/env options there.
